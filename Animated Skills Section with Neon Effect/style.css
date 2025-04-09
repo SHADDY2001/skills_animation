@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(bg.jpg)no-repeat center;
+}
+
+h1{
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    font-size: 28px;
+
+}
+
+.skill-bars{
+    padding: 25px 30px;
+    width: 600px;
+    background: rgba(183, 183, 183, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.skill-bars .bar{
+    margin: 20px 0;
+}
+
+.skill-bars .bar:first-child{
+    margin-top: 0;
+}
+
+.skill-bars .bar .info{
+    margin-bottom: 5px;
+
+}
+
+.skill-bars .bar .info span{
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+.skill-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+                      0 1px 1px rgba(255,255,255,0.8);  
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+
+
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span{
+    height: 110%;
+    position: absolute;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.bar .progress-line.javascript span{
+    width: 75%;
+    background-color: lightgreen;
+    box-shadow: 0 0 25px lightgreen;
+    transition: 0.3s ease;
+}
+
+
+.bar .progress-line.javascript span:hover{
+    box-shadow: 0 0 25px lightgreen,
+                0 0 50px lightgreen;
+}
+
+.bar .progress-line.html span{
+    width: 95%;
+    background-color: gold;
+    box-shadow: 0 0 25px gold;
+    transition: 0.3s ease;
+}
+
+
+.bar .progress-line.html span:hover{
+    box-shadow: 0 0 25px gold,
+                0 0 50px gold;
+}
+
+.bar .progress-line.react span{
+    width: 85%;
+    background-color: pink;
+    box-shadow: 0 0 25px gold;
+    transition: 0.3s ease;
+}
+
+
+.bar .progress-line.react span:hover{
+    box-shadow: 0 0 25px pink,
+                0 0 50px pink;
+}
+
+.bar .progress-line.css span{
+    width: 80%;
+    background-color: lightcyan;
+    box-shadow: 0 0 25px lightcyan;
+    transition: 0.3s ease;
+}
+
+
+.bar .progress-line.css span:hover{
+    box-shadow: 0 0 25px lightcyan,
+                0 0 50px lightcyan;
+}
+
+.bar .progress-line.node span{
+    width: 85%;
+    background-color: lightcoral;
+    box-shadow: 0 0 25px lightcoral;
+    transition: 0.3s ease;
+}
+
+
+.bar .progress-line.node span:hover{
+    box-shadow: 0 0 25px lightcoral,
+                0 0 50px lightcoral;
+}
